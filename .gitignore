@@ -27,4 +27,4 @@
 /Implementation/WebTier/Lib/*
 /Implementation/WebTier/Logs/*
 /Implementation/WebTier/TEST-net.jsunit.StandaloneTest.xml
-/Requirements/*.zip
+/Requirements/**/*.zip

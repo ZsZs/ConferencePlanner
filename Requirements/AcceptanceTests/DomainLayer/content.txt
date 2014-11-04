@@ -1,0 +1,11 @@
+!2 Conference Planner - Domain Logic Documentation and Tests
+
+As depicted in the diagram below, !-ConferencePlanner-! knows about and supports the following domain areas:
+
+!***> Domain Model Overview
+!img http://localhost:8004/files/ConferencePlanner/Domain_Model-Overview.jpg
+***!
+ * '''[[Party][>PartyDomain]]''' - domain area
+ * '''[[Order][>OrderDomain]]''' - domain area
+ * '''[[Product][>ProductDomain]]''' - domain are
+
