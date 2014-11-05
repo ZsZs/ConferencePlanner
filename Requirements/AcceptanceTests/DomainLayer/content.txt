@@ -5,7 +5,7 @@ As depicted in the diagram below, !-ConferencePlanner-! knows about and supports
 !***> Domain Model Overview
 !img http://localhost:8004/files/ConferencePlanner/Domain_Model-Overview.jpg
 ***!
- * '''[[Party][>PartyDomain]]''' - domain area
- * '''[[Order][>OrderDomain]]''' - domain area
- * '''[[Product][>ProductDomain]]''' - domain are
+ * '''[[Conference Event][>ConferenceEvent]]''' - domain area
+ * '''[[Conference Manager][>ConferenceManager]]''' - domain area
+ * '''[[Conference Talk][>Conference Talk]]''' - domain area
 

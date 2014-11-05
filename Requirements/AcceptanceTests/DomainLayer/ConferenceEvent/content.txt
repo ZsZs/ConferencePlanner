@@ -1,0 +1,10 @@
+!2 Conference Event - Domain Area Documentation and Tests
+
+To get an overview about the topics covered by Conference Event domain take a look at the diagram below.
+!***> Conference Event Domain Area - Overview
+!img files/TrainingApplication/Images/DesignModel_ArchetypePatternOverview.gif
+***!
+As you probable discover this domain area shows up the common '''Knowledge level''', and '''Operation level''' dichotomy as the domain revolves around two main classes: '''Conference Event''' and '''Conference Event Type'''.
+ * '''[[Conference Event Type][>ProductType]]''' - describes the common porperties and constraints of conference events
+ * '''[[Conference Event][>ProductInstance]]''' - represents a specific instances of a conference events
+
