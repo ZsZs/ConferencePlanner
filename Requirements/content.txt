@@ -1,5 +1,5 @@
-!1 Training Application
-This is the sub site of !-TrainingApplicaiton-!, which serves as central point of it's development. It collects project management informations, but - probably - more importantly automated tests against the application. Please go ahead with the links below, according to you interest:
+!1 Conference Planner
+This is the sub site of !-ConferencePlanner-!, which serves as central point of it's development. It collects project management informations, but - probably - more importantly automated tests against the application. Please go ahead with the links below, according to you interest:
 
  * '''[[Product Backlog][>ProductBacklog]]''' - used to manage - define, estimate and prioritize - product owner's needs
  * '''[[Sprint Backlogs][>SpringBacklogs]]''' - used to manage - define, estimate and prioritize - developer's tasks

@@ -9,8 +9,8 @@
 	<Versions>true</Versions>
 	<WhereUsed>true</WhereUsed>
 	<WikiImport>
-		<Source>http://test.processpuzzle.com:80/TrainingApplication</Source>
-		<IsRoot/>
 		<AutoUpdate/>
+		<IsRoot/>
+		<Source>http://test.processpuzzle.com:80/TrainingApplication</Source>
 	</WikiImport>
 </properties>

@@ -1,4 +1,5 @@
 /Deployment/Distribution/*
+/Implementation/.settings
 /Implementation/Build/local.build.properties
 /Implementation/Build/Logs/*
 /Implementation/DomainTier/Binaries/*
