@@ -11,8 +11,8 @@
 	<description>Helps to plan, schedule and manage conferences.</description>
 
 	<organization>
-		<name>Kuehne und Nagel</name>
-		<url>http://www.kn-portal.com/</url>
+		<name>Agile Renovation</name>
+		<url>http://www.agilerenovation.com/</url>
 	</organization>
 
 	<properties>
@@ -30,6 +30,8 @@
 	</properties>
 
 	<modules>
+	  <module>conference-planner-domain</module>
+	  <module>conference-planner-integration-tests</module>
 	</modules>
 
 	<dependencies>
