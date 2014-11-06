@@ -5,4 +5,4 @@
 |com.agilerenovation.conference.manager.domain|
 
 |script|configure application|
-|set up event types|
+|configure|

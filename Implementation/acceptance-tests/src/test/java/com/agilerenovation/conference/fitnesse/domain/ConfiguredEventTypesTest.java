@@ -11,11 +11,11 @@ import org.junit.Test;
 public class ConfiguredEventTypesTest {
    @Before public void beforeEachTests(){
       ConfigureApplication configureApplication = new ConfigureApplication();
-      configureApplication.setUpEventTypes();
+      configureApplication.configure();
    }
    
    @Test public void collectsDefinedEventTypes(){
-      ConfiguredEventTypes configuredEventTypes = new ConfiguredEventTypes();
+      RetrieveEventTypes configuredEventTypes = new RetrieveEventTypes();
       
       List<Object> rows = configuredEventTypes.query();
       

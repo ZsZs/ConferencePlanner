@@ -16,7 +16,7 @@ public class ConfigureApplicationTest {
    }
    
    @Test public void defineConferenceEventTypes(){
-      configureApplication.setUpEventTypes();
+      configureApplication.configure();
       
       ConferenceEventTypeRepository eventTypeRepository = ConferenceEventTypeRepository.getInstance();
       

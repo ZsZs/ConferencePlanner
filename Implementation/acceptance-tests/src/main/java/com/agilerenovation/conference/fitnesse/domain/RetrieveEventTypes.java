@@ -9,12 +9,12 @@ import com.agilerenovation.conference.eventtype.domain.ConferenceEventType;
 import com.agilerenovation.conference.eventtype.integration.ConferenceEventTypeRepository;
 import com.google.common.collect.Lists;
 
-public class ConfiguredEventTypes {
+public class RetrieveEventTypes {
 
    public void table( List<List<String>> table ) {
       // optional function
    }
-
+   
    @SuppressWarnings( "unchecked" )
    public List<Object> query() {
       List<Object> resultList = Lists.newArrayList();

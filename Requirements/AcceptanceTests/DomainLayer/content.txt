@@ -7,5 +7,5 @@ As depicted in the diagram below, !-ConferencePlanner-! knows about and supports
 ***!
  * '''[[Conference Event][>ConferenceEvent]]''' - domain area
  * '''[[Conference Manager][>ConferenceManager]]''' - domain area
- * '''[[Conference Talk][>Conference Talk]]''' - domain area
+ * '''[[Conference Paper][>ConferencePaper]]''' - domain area
 

@@ -13,12 +13,12 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.agilerenovation.conference.resource.integration.Resource;
-import com.agilerenovation.conference.talk.domain.ConferenceTalk;
+import com.agilerenovation.conference.talk.domain.ConferencePaper;
 import com.google.common.collect.Sets;
 
 public class ConferenceTalkRepository {
    public static final String XPATH_SUBMISSIONS = "/submissions/submission";
-   private Set<ConferenceTalk> talks = Sets.newHashSet();
+   private Set<ConferencePaper> talks = Sets.newHashSet();
 
    // public accessors and mutators
    public void importTalks( final String resourceSpecifier ) {
@@ -31,7 +31,7 @@ public class ConferenceTalkRepository {
    }
 
    // properties
-   public Set<ConferenceTalk> getAll() {
+   public Set<ConferencePaper> getAll() {
       return talks;
    }
 
@@ -42,7 +42,7 @@ public class ConferenceTalkRepository {
             Element element = (Element) submissionNodes.item( i );
             String title = element.getElementsByTagName( "title" ).item( 0 ).getTextContent();
             String length = element.getElementsByTagName( "length" ).item( 0 ).getTextContent();
-            ConferenceTalk talk = ConferenceTalk.create( title, length );
+            ConferencePaper talk = ConferencePaper.create( title, length );
             talks.add( talk );
          }
       }

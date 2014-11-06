@@ -1,22 +1,22 @@
 package com.agilerenovation.conference.talk.domain;
 
-public class ConferenceTalk {
+public class ConferencePaper {
    private Integer length;
    private String title;
    
    //Constructors and factory methods
-   public ConferenceTalk( final String title, final Integer length ){
+   public ConferencePaper( final String title, final Integer length ){
       this.title = title;
       this.length = length;
    }
    
-   public static ConferenceTalk create( String title, String length ) {
-      ConferenceTalk talk = null;
+   public static ConferencePaper create( String title, String length ) {
+      ConferencePaper talk = null;
       
       if( length == null || length == "" ){
-         talk = new LighteningTalk( title );
+         talk = new ConferencePaper( title, 5 );
       }else{
-         talk = new ConferenceTalk( title, Integer.parseInt( length ));
+         talk = new ConferencePaper( title, Integer.parseInt( length ));
       }
       
       return talk;
