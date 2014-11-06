@@ -1,0 +1,2 @@
+|AcceptanceTests.DomainLayer.ConferenceEvent.ConferenceEvent||19:16:59 Wed, Nov 05, 2014|
+|AcceptanceTests.DomainLayer.ConferenceEvent.ConferenceEventType||19:15:32 Wed, Nov 05, 2014|

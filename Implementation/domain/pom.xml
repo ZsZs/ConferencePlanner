@@ -7,7 +7,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>conference-planner-domain</artifactId>
-	<name>Conference Planner Domain</name>
+	<name>Conference Planner - Domain</name>
 	<description>Domain logic of conference planner</description>
 	
    <organization>
