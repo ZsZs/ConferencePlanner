@@ -1,18 +1,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.agilerenovation</groupId>
-    <artifactId>conference-planner</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>conference-planner-integration-tests</artifactId>
-  <name>Conference Planner - Integration Tests</name>
-  <description>Integration tests for Conference Planner</description>
-  <dependencies>
-  	<dependency>
-  		<groupId>com.agilerenovation</groupId>
-  		<artifactId>conference-planner-domain</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
-  </dependencies>
+   <modelVersion>4.0.0</modelVersion>
+   <parent>
+      <groupId>com.agilerenovation</groupId>
+      <artifactId>conference-planner</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+   </parent>
+   <artifactId>conference-planner-integration-tests</artifactId>
+   <name>Conference Planner - Integration Tests</name>
+   <description>Integration tests for Conference Planner</description>
+   
+   <organization>
+      <name>Agile Renovation</name>
+      <url>http://www.agilerenovation.com/</url>
+   </organization>
+   
+   <dependencies>
+      <dependency>
+         <groupId>com.agilerenovation</groupId>
+         <artifactId>conference-planner-domain</artifactId>
+         <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+   </dependencies>
 </project>

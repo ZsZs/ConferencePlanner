@@ -6,7 +6,7 @@ public class ConferenceManagerTest {
    private ConferenceManager manager;
 
    @Before public void beforeEachTests(){
-      manager = new ConferenceManager();
+      manager = ConferenceManager.getInstance();
    }
    
    

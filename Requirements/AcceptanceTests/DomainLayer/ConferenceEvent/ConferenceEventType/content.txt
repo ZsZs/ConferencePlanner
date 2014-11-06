@@ -6,11 +6,13 @@ To get an overview about the topics covered by Conference Event Type aggregation
 ***!
 
 '''Rule:''' The system knows about the following conference event types:
-|Conference|
-|!-ConferenceDay-!|
-|Track|
-|Session|
-|Talk|
-|!-LighteningTalk-!|
-|!-NetworkEvent-!|
-|Catering|
+|Query:configured event types|
+|name|description|
+|Conference|Gathering of professionals for sharing knowledge.|
+|Conference Day||
+|Track||
+|Session||
+|Talk||
+|Lightening Talk|Very short talk to flash an idea.|
+|Network Event||
+|Catering||
