@@ -23,6 +23,9 @@ public class ConferenceManager {
    }
    
    //Public accessors and mutators
+   public void scheduleEvents() {
+   }
+   
    public void setUpEventTypes(){
       ConferenceEventTypeRepository eventTypeRepository = ConferenceEventTypeRepository.getInstance();
       ConferenceEventTypeFactory eventTypeFactory = new ConferenceEventTypeFactory();

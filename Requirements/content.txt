@@ -29,4 +29,8 @@ This is the sub site of !-ConferencePlanner-!, which serves as central point of 
 
 '''Third party libraries for !-ConferencePlanner-! domain tier:'''
 !path ${MavenRepository}\com\google\guava\guava\14.0.1\*.jar
+
+!*> '''Maven Classpath'''
+${maven.classpath}
+*!
 ***!

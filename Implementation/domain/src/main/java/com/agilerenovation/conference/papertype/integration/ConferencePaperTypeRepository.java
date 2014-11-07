@@ -3,6 +3,7 @@ package com.agilerenovation.conference.papertype.integration;
 import java.util.Set;
 
 import com.agilerenovation.conference.papertype.domain.ConferencePaperType;
+import com.agilerenovation.conference.papertype.domain.ConferencePaperTypes;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 
@@ -31,5 +32,18 @@ public class ConferencePaperTypeRepository {
    
    public Set<ConferencePaperType> findAll(){
       return ImmutableSet.copyOf( paperTypes );
+   }
+
+   public ConferencePaperType findByName( ConferencePaperTypes paperTypeEnum ) {
+      ConferencePaperType foundType = null;
+      
+      for( ConferencePaperType conferencePaperType : paperTypes ){
+         if( conferencePaperType.getName().equals( paperTypeEnum.getName() )){
+            foundType = conferencePaperType;
+            break;
+         }
+      }
+      
+      return foundType;
    }
 }

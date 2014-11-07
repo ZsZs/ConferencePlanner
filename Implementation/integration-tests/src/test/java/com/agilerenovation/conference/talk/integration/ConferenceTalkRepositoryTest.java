@@ -15,27 +15,28 @@ import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
+import com.agilerenovation.conference.paper.integration.ConferencePaperRepository;
 import com.agilerenovation.conference.resource.integration.Resource;
 
 public class ConferenceTalkRepositoryTest {
    private static final String INPUT_DATA_PATH = "classpath:/ConferenceSubmissions.xml";
-   private ConferenceTalkRepository repository;
+   private ConferencePaperRepository repository;
 
    @Before public void beforeEachTests(){
-      repository = new ConferenceTalkRepository();
+      repository = ConferencePaperRepository.getInstance();
    }
    
    @Test public void importTalks_instantiatesTalks() throws MalformedURLException, XPathExpressionException{
       //SETUP:
       Document inputData = Resource.create( INPUT_DATA_PATH ).getDomDocument();
       XPath xPath = XPathFactory.newInstance().newXPath();
-      NodeList nodes = (NodeList) xPath.evaluate( ConferenceTalkRepository.XPATH_SUBMISSIONS, inputData, XPathConstants.NODESET );
+      NodeList nodes = (NodeList) xPath.evaluate( ConferencePaperRepository.XPATH_SUBMISSIONS, inputData, XPathConstants.NODESET );
       
       //EXECUTION:
       repository.importTalks( INPUT_DATA_PATH );
       
       //VERIFY:
-      assertThat( repository.getAll().size(), equalTo( nodes.getLength() ));
+      assertThat( repository.findAll().size(), equalTo( nodes.getLength() ));
    }
    
    //private test helper methods

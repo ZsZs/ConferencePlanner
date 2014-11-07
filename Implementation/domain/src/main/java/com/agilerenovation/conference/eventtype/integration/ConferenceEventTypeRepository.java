@@ -3,6 +3,7 @@ package com.agilerenovation.conference.eventtype.integration;
 import java.util.Set;
 
 import com.agilerenovation.conference.eventtype.domain.ConferenceEventType;
+import com.agilerenovation.conference.eventtype.domain.ConferenceEventTypes;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 
@@ -28,5 +29,15 @@ public class ConferenceEventTypeRepository{
    
    public Set<ConferenceEventType> findAll(){
       return ImmutableSet.copyOf( eventTypes );
+   }
+
+   public ConferenceEventType findByName( ConferenceEventTypes typeCode ) {
+      ConferenceEventType foundType = null;
+      for( ConferenceEventType conferenceEventType : eventTypes ){
+         if( conferenceEventType.getName().equals( typeCode.getName() )){
+            foundType = conferenceEventType;
+         }
+      }
+      return foundType;
    }
 }
