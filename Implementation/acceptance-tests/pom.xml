@@ -20,12 +20,54 @@
          <artifactId>conference-planner-domain</artifactId>
          <version>0.0.1-SNAPSHOT</version>
       </dependency>
-
-      <dependency>
-         <groupId>org.fitnesse</groupId>
-         <artifactId>fitnesse</artifactId>
-         <version>20140901</version>
-      </dependency>
+      <dependency><groupId>com.google.guava</groupId><artifactId>guava</artifactId><version>14.0.1</version></dependency>
+      <dependency><groupId>joda-time</groupId><artifactId>joda-time</artifactId><version>2.5</version></dependency>
+      <dependency><groupId>org.fitnesse</groupId><artifactId>fitnesse</artifactId><version>20140901</version></dependency>
    </dependencies>
 
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>uk.co.javahelp.fitnesse</groupId>
+            <artifactId>fitnesse-launcher-maven-plugin</artifactId>
+            <configuration>
+               <port>9123</port>
+               <workingDir>${project.build.directory}/fitnesse</workingDir>
+               <root>FitNesseRoot</root>
+               <testResourceDirectory>src/test/fitnesse</testResourceDirectory>
+               <reportsDir>${project.build.directory}/reports</reportsDir>
+               <resultsDir>${project.build.directory}/results</resultsDir>
+               <summaryFile>${project.build.directory}/results/failsafe-summary.xml</summaryFile>
+               <createSymLink>true</createSymLink>
+               <excludeOptionalDependencies>true</excludeOptionalDependencies> <!-- Deprecated -->
+               <deletePluginsProperties>false</deletePluginsProperties> <!-- Note the 's' in "plugins" -->
+               <alwaysUnpackFitnesse>false</alwaysUnpackFitnesse>
+               <failIfNoTests>false</failIfNoTests>
+
+               <launches>
+                  <launch>
+                     <suite>AcceptanceTests</suite>
+                     <suiteFilter>tag1,tag2</suiteFilter>
+                  </launch>
+               </launches>
+
+            </configuration>
+            
+            <dependencies>
+               <dependency><groupId>joda-time</groupId><artifactId>joda-time</artifactId><version>2.5</version></dependency>
+            </dependencies>
+            
+            <executions>
+               <execution>
+                  <goals>
+                     <goal>set-up</goal>
+                     <goal>run-tests</goal>
+                     <goal>tear-down</goal>
+                     <goal>verify</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
 </project>
