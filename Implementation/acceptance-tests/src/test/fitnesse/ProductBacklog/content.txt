@@ -1,0 +1,10 @@
+!3 Product Backlog
+
+|'''Customer Need'''|'''Story Point'''|'''Priority'''|'''Iteration'''|'''Acceptance Tests'''|
+|The system knows about Conference Paper|5|M| - |[[Tests][AcceptanceTests.DomainLayer.ConferencePaperDomain.ConferencePaper]]|
+|... knows about Conference Paper Type|3|M| - |[[Tests][AcceptanceTests.DomainLayer.ConferencePaperDomain.ConferencePaperType]]|
+|... knows about Conference Event|3|K| - |[[Tests][AcceptanceTests.DomainLayer.ConferenceEventDomain.ConferenceEvent]]|
+|... know about Conference Event Type|2|K| - |[[Tests][AcceptanceTests.DomainLayer.ConferenceEventDomain.ConferenceEventType]]|
+|As the conference organizer I want to import submitted papers|2|K| - |[[Tests][AcceptanceTests.UseCases.ImportPapers]]|
+|... define conference properties|2|K| - |[[Tests][AcceptanceTests.UseCases.DefineConfereceProperties]]|
+|... schedule events|2|K| - |[[Tests][AcceptanceTests.UseCases.ScheduleEvents]]|

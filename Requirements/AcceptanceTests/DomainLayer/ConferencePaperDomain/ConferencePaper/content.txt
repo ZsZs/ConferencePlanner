@@ -1,0 +1,8 @@
+!2 Conference Paper - Aggregation Documentation and Tests
+
+To get an overview about the topics covered by Conference Paper aggregation take a look at the diagram below.
+!***> Conference Paper - Aggregation Overview
+!img /files/ConferencePlanner/Conference_Paper-Details.jpg
+***!
+
+'''Rule:'''

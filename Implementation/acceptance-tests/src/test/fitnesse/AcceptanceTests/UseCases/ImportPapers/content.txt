@@ -1,0 +1,34 @@
+!2 Import Papers - Use Case Documentation and Tests
+
+!4 Scenario: 
+ * The conference organizer receives the submitter papers in an xml file. 
+ * The file contains the title and length of the presentation in minutes.
+ * The application reads the data source and stores the presentations.
+
+|script|Import Papers|
+|import file|file:../../Projects/ConferencePlanner/Implementation/integration-tests/src/test/resources/ConferenceSubmissions.xml|
+
+The imported papers are:
+|Query:retrieve papers|
+|title|length|type|
+|Writing Fast Tests Against Enterprise Rails|60|Talk|
+|Lua for the Masses|30|Talk|
+|Ruby Errors from Mismatched Gem Versions|45|Talk|
+|Common Ruby Errors|45|Talk|
+|Rails for Python Developers lightning|5|Lightening Talk|
+|Communicating Over Distance|60|Talk|
+|Accounting-Driven Development|45|Talk|
+|Woah|30|Talk|
+|Sit Down and Write|30|Talk|
+|Pair Programming vs Noise|45|Talk|
+|Rails Magic|60|Talk|
+|Ruby on Rails: Why We Should Move On|60|Talk|
+|Clojure Ate Scala (on my project)|45|Talk|
+|Programming in the Boondocks of Seattle|30|Talk|
+|Ruby vs. Clojure for Back-End Development|30|Talk|
+|Ruby on Rails Legacy App Maintenance|60|Talk|
+|A World Without !-HackerNews-!|30|Talk|
+|User Interface CSS in Rails Apps|30|Talk|
+
+
+

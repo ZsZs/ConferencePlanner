@@ -1,0 +1,36 @@
+!1 Conference Planner
+This is the sub site of !-ConferencePlanner-!, which serves as central point of it's development. It collects project management informations, but - probably - more importantly automated tests against the application. Please go ahead with the links below, according to you interest:
+
+ * '''[[Product Backlog][>ProductBacklog]]''' - used to manage - define, estimate and prioritize - product owner's needs
+ * '''[[Sprint Backlogs][>SpringBacklogs]]''' - used to manage - define, estimate and prioritize - developer's tasks
+ * '''[[Documentation and Acceptance Tests][>AcceptanceTests]]''' - application documentation and acceptance tests defined by the product owner
+
+!***> Project specific variables
+!define ViewPath {d:\Projects\ConferencePlanner}
+!define ThirdPartyPath {D:\Projects}
+!define MavenRepository {c:\Users\Zsolt\.m2\repository}
+!define AcceptanceTestsFolder {Implementation\acceptance-tests}
+!define DomainTierFolder {Implementation\domain}
+!define IntegrationTestsFolder {Implementation\integration-tests}
+!define CompiledClasses {target\classes}
+!define CompiledTestClasses {target\test-classes}
+***!
+
+!***> Project specific test runner
+#!define TEST_RUNNER {fit.FitServer}
+!define TEST_SYSTEM {slim}
+***!
+
+!***> Project specific Class Path
+'''!-ConferencePlanner-!''' compiled classes
+!path ${ViewPath}\${DomainTierFolder}\${CompiledClasses}
+!path ${ViewPath}\${AcceptanceTestsFolder}\${CompiledClasses}
+
+
+'''Third party libraries for !-ConferencePlanner-! domain tier:'''
+!path ${MavenRepository}\com\google\guava\guava\14.0.1\*.jar
+!path ${MavenRepository}\joda-time\joda-time\2.5\*.jar
+!*> '''Maven Classpath'''
+${maven.classpath}
+*!
+***!

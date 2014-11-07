@@ -1,0 +1,36 @@
+!2 Define Conference Properties - Use Case Documentation and Tests
+
+!4 Scenario:
+The conference organizer defines, ...
+ * the number of conference days
+ * the number of tracks for each day
+ * the number of sessions for each track
+ * the earliest and latest timing for each session
+ * the caterings for each conference day
+ * the network event for each day
+
+|script|define conference properties|
+|define conference|Example Conference|from|2014-12-01|to|2014-12-01|
+|define day|FIRST-DAY|for|Example Conference|
+|define track|TRACK-I|for|FIRST-DAY|
+|define track|TRACK-II|for|FIRST-DAY|
+|define session|Session-I|for|TRACK-I|starting at|9|ending at|12|
+|define session|Session-II|for|TRACK-II|starting at|9|ending at|12|
+|define session|Session-III|for|TRACK-I|starting at|13|ending at|17|
+|define session|Session-IV|for|TRACK-II|starting at|13|ending at|17|
+|define catering|Lunch|for|FIRST-DAY|starting at|12|ending at|13|
+|define network event|Grill and Chill|for|FIRST-DAY|starting at|16|ending at|23|
+
+The defined event are as follows:
+|Query:retrieve events|
+|name|type|parent|planned start|planned end|
+|Example Conference|Conference|none|2014-12-01T00:00:00.000+01:00|2014-12-01T00:00:00.000+01:00|
+|FIRST-DAY|Conference Day|Example Conference|2014-12-01T00:00:00.000+01:00|2014-12-01T00:00:00.000+01:00|
+|TRACK-I|Track|FIRST-DAY|2014-12-01T00:00:00.000+01:00|2014-12-01T00:00:00.000+01:00|
+|TRACK-II|Track|FIRST-DAY|2014-12-01T00:00:00.000+01:00|2014-12-01T00:00:00.000+01:00|
+|Session-I|Session|TRACK-I|2014-12-01T09:00:00.000+01:00|2014-12-01T12:00:00.000+01:00|
+|Session-II|Session|TRACK-II|2014-12-01T09:00:00.000+01:00|2014-12-01T12:00:00.000+01:00|
+|Session-III|Session|TRACK-I|2014-12-01T13:00:00.000+01:00|2014-12-01T17:00:00.000+01:00|
+|Session-IV|Session|TRACK-II|2014-12-01T13:00:00.000+01:00|2014-12-01T17:00:00.000+01:00|
+|Lunch|Catering|FIRST-DAY|2014-12-01T12:00:00.000+01:00|2014-12-01T13:00:00.000+01:00|
+|Grill and Chill|Network Event|FIRST-DAY|2014-12-01T16:00:00.000+01:00|2014-12-01T23:00:00.000+01:00|

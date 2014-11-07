@@ -1,0 +1,9 @@
+|AcceptanceTests.ProjectVision||08:07:11 Fri, Nov 07, 2014|
+|AcceptanceTests.UseCases.ScheduleEvents||05:31:46 Fri, Nov 07, 2014|
+|AcceptanceTests.UseCases.DefineConfereceProperties||05:31:24 Fri, Nov 07, 2014|
+|AcceptanceTests.UseCases.ImportPapers||05:18:46 Fri, Nov 07, 2014|
+|AcceptanceTests.DomainLayer.ConferencePaperDomain.ConferencePaper||12:05:42 Thu, Nov 06, 2014|
+|AcceptanceTests.DomainLayer.ConferencePaper.ConferencePaperType||10:34:55 Thu, Nov 06, 2014|
+|AcceptanceTests.SetUp||08:20:27 Thu, Nov 06, 2014|
+|AcceptanceTests.DomainLayer.ConferenceEvent.ConferenceEvent||19:16:59 Wed, Nov 05, 2014|
+|AcceptanceTests.DomainLayer.ConferenceEvent.ConferenceEventType||19:15:32 Wed, Nov 05, 2014|

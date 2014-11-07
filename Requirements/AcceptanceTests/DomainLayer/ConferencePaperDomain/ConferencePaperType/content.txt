@@ -1,0 +1,12 @@
+!2 Conference Paper Type - Aggregation Documentation and Tests
+
+To get an overview about the topics covered by Conference Paper Type aggregation take a look at the diagram below.
+!***> Conference Event Type - Aggregation Overview
+!img /files/ConferencePlanner/Conference_Paper_Type-Details.jpg
+***!
+
+'''Rule:''' The system knows about the following conference event types:
+|Query:retrieve paper types|
+|name|description|
+|Talk|maximum 60 minute presentation|
+|Lightening Talk|5 minutes long presentaion|

@@ -1,0 +1,9 @@
+|import|
+|fitnesse.slim.tests|
+|com.agilerenovation.conference.fitnesse.domain|
+|com.agilerenovation.conference.fitnesse.usecase|
+|com.agilerenovation.conference.eventtype.domain|
+|com.agilerenovation.conference.manager.domain|
+
+|script|configure application|
+|configure|

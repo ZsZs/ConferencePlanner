@@ -1,0 +1,13 @@
+!2 Conference Event - Aggregation Documentation and Tests
+
+To get an overview about the topics covered by Conference Event aggregation take a look at the diagram below.
+!***> Conference Event - Aggregation Overview
+!img /files/ConferencePlanner/Conference_Event-Details.jpg
+***!
+
+'''Rule:''' Creating an event requires to specify a parent event. The only event, which doesnt has a parent is the Conference.
+|script|create and verify events|
+|create|Conference|event|
+|parent of|Conference|event is|null|
+|create|Conference Day|to|Conference|
+|parent of|Conference|event is|Conference|

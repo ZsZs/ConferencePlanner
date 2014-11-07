@@ -1,0 +1,18 @@
+!2 Conference Event Type - Aggregation Documentation and Tests
+
+To get an overview about the topics covered by Conference Event Type aggregation take a look at the diagram below.
+!***> Conference Event Type - Aggregation Overview
+!img /files/ConferencePlanner/Conference_Event_Type-Details.jpg
+***!
+
+'''Rule:''' The system knows about the following conference event types:
+|Query:retrieve event types|
+|name|description|
+|Conference|Gathering of professionals for sharing knowledge.|
+|Conference Day||
+|Track||
+|Session||
+|Talk||
+|Lightening Talk|Very short talk to flash an idea.|
+|Network Event||
+|Catering||

@@ -1,0 +1,11 @@
+!2 Conference Planner - Domain Logic Documentation and Tests
+
+As depicted in the diagram below, !-ConferencePlanner-! knows about and supports the following domain areas:
+
+!***> Domain Model Overview
+!img /files/ConferencePlanner/Domain_Model-Overview.jpg
+***!
+ * '''[[Conference Event][>ConferenceEventDomain]]''' - domain area
+ * '''[[Conference Manager][>ConferenceManager]]''' - domain area
+ * '''[[Conference Paper][>ConferencePaperDomain]]''' - domain area
+

@@ -1,0 +1,11 @@
+!2 Conference Planner - Use Cases Documentation and Tests
+
+To get an overview of the users of the application and the funtionality used by them, take a look to the following diagram.
+!***> Use Case Model Overview
+!img /files/ConferencePlanner/Use_Case_Model-Overview.jpg
+***!
+The application used by the following actors:
+ * '''Conference Planner''' - aktor
+  * '''[[Import submitted papers][>ImportPapers]]''' - use case
+  * '''[[Define Conference Properties][>DefineConfereceProperties]]''' - use case
+  * '''[[Schedule Events][>ScheduleEvents]]''' - use case

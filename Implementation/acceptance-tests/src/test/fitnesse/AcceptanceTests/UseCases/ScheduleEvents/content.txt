@@ -1,0 +1,24 @@
+!2 Schedule Events - Use Case Documentation and Tests
+
+'''Precondition:''' The conference properties has to be defined. See the included page.
+!include -c .FrontPage.ConferencePlanner.AcceptanceTests.UseCases.DefineConfereceProperties
+
+'''Precondition:''' The submitted papers has to be imported.
+!include -c .FrontPage.ConferencePlanner.AcceptanceTests.UseCases.ImportPapers
+
+!4 Scenario:
+The conference organizer
+ * asks the system to schedule the submitted papers
+
+|script|schedule events|
+|schedule submitted papers|
+
+The scheduled talks are:
+|ordered query:retrieve scheduled events|TRACK-I|
+|begins at|title|
+|09:00|Session-I|
+|12:00|Lunch|
+|13:00|Session-III|
+|16:00|Grill and Chill|
+
+
