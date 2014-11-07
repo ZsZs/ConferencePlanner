@@ -1,9 +1,0 @@
-!2 Conference Paper - Domain Area Documentation and Tests
-
-To get an overview about the topics covered by Conference Event domain take a look at the diagram below.
-!***> Conference Event Domain Area - Overview
-!img /files/ConferencePlanner/Conference_Paper_Domain-Overview.jpg
-***!
-As you probable discover this domain area shows up the common '''Knowledge level''', and '''Operation level''' dichotomy as the domain revolves around two main classes: '''Conference Paper''' and '''Conference Paper Type'''.
- * '''[[Conference Paper Type][>ConferencePaperType]]''' - defines the possible paper types, to be submitted and perheps presented by the speakers
- * '''[[Conference Paper][>ConferencePaper]]''' - represents a concrete, submitted paper.

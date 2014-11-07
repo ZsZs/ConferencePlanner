@@ -1,6 +1,0 @@
-!2 Conference Event - Aggregation Documentation and Tests
-
-To get an overview about the topics covered by Conference Event Type aggregation take a look at the diagram below.
-!***> Conference Event Domain Area - Overview
-!img /files/ConferencePlanner/Conference_Event-Details.jpg
-***!
