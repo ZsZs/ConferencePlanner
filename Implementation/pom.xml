@@ -31,6 +31,7 @@
 
 	<modules>
 	  <module>domain</module>
+     <module>web</module>
 	  <module>integration-tests</module>
 	  <module>acceptance-tests</module>
 	</modules>
