@@ -13,12 +13,12 @@ public class ConferenceDay extends CompositeConferenceEvent {
       super( type, parent, name, plannedStart, plannedEnd );
    }
 
-   public List<ConferenceEvent> getNetworkEvents() {
-      return getEventsByType( ConferenceEventTypes.NETWORK_EVENT );
+   public List<NetworkEvent> getNetworkEvents() {
+      return getEventsByType( ConferenceEventTypes.NETWORK_EVENT, NetworkEvent.class );
    }
 
-   public List<ConferenceEvent> getCateringEvents() {
-      return getEventsByType( ConferenceEventTypes.CATERING );
+   public List<ConferenceCatering> getCateringEvents() {
+      return getEventsByType( ConferenceEventTypes.CATERING, ConferenceCatering.class );
    }
 
 }

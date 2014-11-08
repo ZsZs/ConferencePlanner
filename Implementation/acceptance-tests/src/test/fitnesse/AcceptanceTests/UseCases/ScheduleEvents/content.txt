@@ -17,8 +17,16 @@ The scheduled talks are:
 |ordered query:retrieve scheduled events|TRACK-I|
 |begins at|title|
 |09:00|Session-I|
+|09:00|Rails Magic|
 |12:00|Lunch|
 |13:00|Session-III|
+|16:00|Grill and Chill|
+
+|ordered query:retrieve scheduled events|TRACK-II|
+|begins at|title|
+|09:00|Session-II|
+|12:00|Lunch|
+|13:00|Session-IV|
 |16:00|Grill and Chill|
 
 

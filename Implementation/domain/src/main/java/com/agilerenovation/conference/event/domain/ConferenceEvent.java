@@ -19,13 +19,15 @@ public abstract class ConferenceEvent {
       this.plannedStart = plannedStart;
       this.plannedEnd = plannedEnd;
       this.scheduledStart = plannedStart;
-      this.scheduledEnd = plannedEnd;
+      this.scheduledEnd = plannedStart;
       this.parent = parent;
       if( parent != null ){
          parent.addEvent( this );
       }
    }
 
+   //Public accessors and mutators
+   
    //Properties
    public String getName() { return name; }
    public ConferenceEvent getParent() { return parent; }
@@ -38,5 +40,10 @@ public abstract class ConferenceEvent {
    public void setPlannedEnd( DateTime plannedEnd ) { this.plannedEnd = plannedEnd; }
    public void setPlannedStart( DateTime plannedStart ) { this.plannedStart = plannedStart; }   
    public void setScheduledEnd( DateTime scheduledEnd ) { this.scheduledEnd = scheduledEnd; }
-   public void setScheduledStart( DateTime scheduledStart ) { this.scheduledStart = scheduledStart; }   
+   public void setScheduledStart( DateTime scheduledStart ) { this.scheduledStart = scheduledStart; }
+
+   //Protected, private helper methods
+   protected void calculateScheduledEnd() {
+      scheduledEnd = plannedEnd;
+   }   
 }

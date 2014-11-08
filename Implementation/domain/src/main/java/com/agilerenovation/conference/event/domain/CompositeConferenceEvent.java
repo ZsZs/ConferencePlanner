@@ -38,13 +38,24 @@ public abstract class CompositeConferenceEvent extends ConferenceEvent {
       return ImmutableList.copyOf( events );
    }
 
-   public List<ConferenceEvent> getEventsByType( ConferenceEventTypes eventType ) {
-      List<ConferenceEvent> filteredEvents = Lists.newArrayList();
-      for( ConferenceEvent conferenceEvent : events ){
+   @SuppressWarnings( "unchecked" )
+   public <E extends ConferenceEvent> List<E> getEventsByType( ConferenceEventTypes eventType, Class<E> eventClass  ) {
+      List<E> filteredEvents = Lists.newArrayList();
+      for( ConferenceEvent conferenceEvent : getAllNestedEvents() ){
          if( conferenceEvent.getType().getName().equals( eventType.getName() )){
-            filteredEvents.add( conferenceEvent );
+            filteredEvents.add( (E) conferenceEvent );
          }
       }
       return filteredEvents;
+   }
+
+   //Protected, private helper methods
+   protected void calculateScheduledEnd() {
+      for( ConferenceEvent conferenceEvent : events ){
+         conferenceEvent.calculateScheduledEnd();
+         if( conferenceEvent.getScheduledEnd().compareTo( scheduledEnd ) > 0 ){
+            scheduledEnd = conferenceEvent.getScheduledEnd();
+         }
+      }
    }
 }

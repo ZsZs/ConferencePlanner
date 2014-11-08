@@ -1,9 +1,12 @@
 package com.agilerenovation.conference.event.integration;
 
+import java.util.List;
 import java.util.Set;
 
 import com.agilerenovation.conference.event.domain.ConferenceEvent;
+import com.agilerenovation.conference.eventtype.domain.ConferenceEventTypes;
 import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 public class ConferenceEventRepository {
@@ -44,5 +47,15 @@ public class ConferenceEventRepository {
          }
       }
       return foundEvent;
+   }
+
+   public List<ConferenceEvent> findByType( ConferenceEventTypes typeCode ) {
+      List<ConferenceEvent> foundEvents = Lists.newArrayList();
+      for( ConferenceEvent conferenceEvent : events ){
+         if( conferenceEvent.getType().getName().equals( typeCode.getName() )){
+            foundEvents.add( conferenceEvent );
+         }
+      }
+      return foundEvents;
    }
 }

@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.agilerenovation.conference.event.domain.CompositeConferenceEvent;
 import com.agilerenovation.conference.event.domain.ConferenceSession;
 import com.agilerenovation.conference.event.domain.ConferenceTrack;
 import com.agilerenovation.conference.event.integration.ConferenceEventRepository;
@@ -48,7 +49,7 @@ public class DefineConferencePropertiesTest {
       
       //VERIFY:
       ConferenceTrack track = eventRepository.findByName( "track-1", ConferenceTrack.class );
-      ConferenceSession session = eventRepository.findByName( "session-1", ConferenceSession.class );
+      CompositeConferenceEvent session = eventRepository.findByName( "session-1", ConferenceSession.class );
       assertThat( session.getPlannedStart(), equalTo( track.getPlannedStart().plusHours( 9 )));
       assertThat( session.getPlannedEnd(), equalTo( track.getPlannedStart().plusHours( 12 )));
    }

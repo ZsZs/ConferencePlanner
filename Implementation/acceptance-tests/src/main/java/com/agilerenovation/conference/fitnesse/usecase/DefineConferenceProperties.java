@@ -4,10 +4,10 @@ import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import com.agilerenovation.conference.event.domain.CompositeConferenceEvent;
 import com.agilerenovation.conference.event.domain.Conference;
 import com.agilerenovation.conference.event.domain.ConferenceCatering;
 import com.agilerenovation.conference.event.domain.ConferenceDay;
-import com.agilerenovation.conference.event.domain.ConferenceSession;
 import com.agilerenovation.conference.event.domain.ConferenceTrack;
 import com.agilerenovation.conference.event.domain.NetworkEvent;
 import com.agilerenovation.conference.event.integration.ConferenceEventFactory;
@@ -46,7 +46,7 @@ public class DefineConferenceProperties {
    }
    
    public void defineSessionForStartingAtEndingAt( final String sessionName, final String trackName, final String startsAt, final String endsAt ){
-      ConferenceSession session = eventFactory.createSession( sessionName, trackName, Integer.parseInt( startsAt ), Integer.parseInt( endsAt ));
+      CompositeConferenceEvent session = eventFactory.createSession( sessionName, trackName, Integer.parseInt( startsAt ), Integer.parseInt( endsAt ));
       eventRepository.add( session );
    }
    
