@@ -10,7 +10,7 @@
    <description>Conference planner web interface</description>
 
    <properties>
-      <jettyVersion>9.2.3.v20140905</jettyVersion>
+      <jettyVersion>9.3.0.M0</jettyVersion>
    </properties>
 
    <dependencies>
@@ -21,17 +21,50 @@
       </dependency>
 
       <dependency>
-         <groupId>org.eclipse.jetty</groupId>
-         <artifactId>jetty-server</artifactId>
-         <version>${jettyVersion}</version>
-      </dependency>
-
-      <dependency>
          <groupId>javax.servlet</groupId>
          <artifactId>javax.servlet-api</artifactId>
          <version>3.1.0</version>
          <scope>provided</scope>
       </dependency>
+
+      <dependency>
+         <groupId>org.eclipse.jetty</groupId>
+         <artifactId>jetty-annotations</artifactId>
+         <version>9.3.0.M0</version>
+      </dependency>
+
+      <dependency>
+         <groupId>org.eclipse.jetty</groupId>
+         <artifactId>jetty-server</artifactId>
+         <version>9.3.0.M0</version>
+      </dependency>
+
+      <dependency>
+         <groupId>org.eclipse.jetty</groupId>
+         <artifactId>jetty-webapp</artifactId>
+         <version>9.3.0.M0</version>
+      </dependency>
+
+      <dependency>
+         <groupId>org.eclipse.jetty</groupId>
+         <artifactId>jetty-jsp</artifactId>
+         <version>9.3.0.M0</version>
+      </dependency>
+
+      <dependency>
+         <groupId>org.eclipse.jetty</groupId>
+         <artifactId>apache-jsp</artifactId>
+         <version>9.3.0.M0</version>
+         <type>jar</type>
+      </dependency>
+      
+      <dependency>
+         <groupId>org.eclipse.jetty</groupId>
+         <artifactId>apache-jstl</artifactId>
+         <version>9.3.0.M0</version>
+         <type>pom</type>
+      </dependency>
+      
    </dependencies>
 
    <build>
@@ -39,8 +72,9 @@
          <plugin>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-maven-plugin</artifactId>
-            <version>${jettyVersion}</version>
+            <version>9.3.0.M0</version>
          </plugin>
+
          <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
