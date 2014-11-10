@@ -7,12 +7,12 @@
 
    <servlet>
       <servlet-name>ConferenceManager</servlet-name>
-      <servlet-class>com.agilerenovation.conference.manager.web.ConferenceManagerServlet</servlet-class>
+      <servlet-class>com.agilerenovation.conference.manager.web.CommandController</servlet-class>
    </servlet>
    
    <servlet-mapping>
       <servlet-name>ConferenceManager</servlet-name>
-      <url-pattern>/ConferencePlanner/*</url-pattern>
+      <url-pattern>/Command/*</url-pattern>
    </servlet-mapping>
 
 </web-app>

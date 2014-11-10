@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<submissions>
+   <submission>
+      <title>Writing Fast Tests Against Enterprise Rails</title>
+      <length>60</length>
+   </submission>
+   <submission>
+      <title>Lua for the Masses</title>
+      <length>30</length>
+   </submission>
+   <submission>
+      <title>Ruby Errors from Mismatched Gem Versions</title>
+      <length>45</length>
+   </submission>
+   <submission>
+      <title>Common Ruby Errors</title>
+      <length>45</length>
+   </submission>
+   <submission>
+      <title>Rails for Python Developers lightning</title>
+      <length></length>
+   </submission>
+   <submission>
+      <title>Communicating Over Distance</title>
+      <length>60</length>
+   </submission>
+   <submission>
+      <title>Accounting-Driven Development</title>
+      <length>45</length>
+   </submission>
+   <submission>
+      <title>Woah</title>
+      <length>30</length>
+   </submission>
+   <submission>
+      <title>Sit Down and Write</title>
+      <length>30</length>
+   </submission>
+   <submission>
+      <title>Pair Programming vs Noise</title>
+      <length>45</length>
+   </submission>
+   <submission>
+      <title>Rails Magic</title>
+      <length>60</length>
+   </submission>
+   <submission>
+      <title>Ruby on Rails: Why We Should Move On</title>
+      <length>60</length>
+   </submission>
+   <submission>
+      <title>Clojure Ate Scala (on my project)</title>
+      <length>45</length>
+   </submission>
+   <submission>
+      <title>Programming in the Boondocks of Seattle</title>
+      <length>30</length>
+   </submission>
+   <submission>
+      <title>Ruby vs. Clojure for Back-End Development</title>
+      <length>30</length>
+   </submission>
+   <submission>
+      <title>Ruby on Rails Legacy App Maintenance</title>
+      <length>60</length>
+   </submission>
+   <submission>
+      <title>A World Without HackerNews</title>
+      <length>30</length>
+   </submission>
+   <submission>
+      <title>User Interface CSS in Rails Apps</title>
+      <length>30</length>
+   </submission>
+</submissions>

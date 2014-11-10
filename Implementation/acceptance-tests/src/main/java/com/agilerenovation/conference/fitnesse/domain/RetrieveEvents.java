@@ -24,8 +24,8 @@ public class RetrieveEvents {
          List<String> name = list( "name", conferenceEvent.getName());
          List<String> type = list( "type", conferenceEvent.getType().getName());
          List<String> parent = (conferenceEvent.getParent() != null) ? list( "parent", conferenceEvent.getParent().getName()) : list( "parent", "none" );
-         List<String> plannedStart = list( "planned start", conferenceEvent.getPlannedStart().toString() );
-         List<String> plannedEnd = list( "planned end", conferenceEvent.getPlannedEnd().toString() );
+         List<String> plannedStart = list( "planned start", conferenceEvent.getEarliestStart().toString() );
+         List<String> plannedEnd = list( "planned end", conferenceEvent.getEarliestEnd().toString() );
          
          resultList.add( list( name, type, parent, plannedStart, plannedEnd ));
       }

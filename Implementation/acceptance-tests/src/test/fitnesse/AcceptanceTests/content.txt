@@ -10,9 +10,9 @@ According to this duality in specification's purpose, viewpoints, and abstractio
 !img files/ConferencePlanner/Images/BusinessModelOverview_BusinessModelOverview.gif
 ***!
  * '''Business terms and rules''' are specified and tested in the context of [[Domain Model][^DomainLayer]]
- * '''The consistent sets of datas used in workflows, especially in activities''' are specified and tested as [[Work Products][>WorkProducts]]
- * '''The consistent sets of activities performed by humans playing a role''' are specified and tested as [[Roles][^RolesPackage]]
- * '''The complex series of business activities''' are specified and tested as [[Workflows][^WorkflowsPackage]]
+# * '''The consistent sets of datas used in workflows, especially in activities''' are specified and tested as [[Work Products][>WorkProducts]]
+# * '''The consistent sets of activities performed by humans playing a role''' are specified and tested as [[Roles][^RolesPackage]]
+# * '''The complex series of business activities''' are specified and tested as [[Workflows][^WorkflowsPackage]]
  * '''The system's usability''' is specified and tested in the context of [[Use Cases][^UseCases]]
 
 !3 Design Model
@@ -20,14 +20,14 @@ As the diagram below depicts, '''!-ConferencePlanner-!''' has a complex componen
 !***> Component Dependencies
 !img files/ConferencePlanner/Images/DesignModel_DesignModelOverview.gif
 ***!
- * '''The Browser elements''' - mainly !-JavaScript-! widgets - are specified and tested in the [[!-ConferencePlanner-! Browser Interface][^BrowserInterface]] component.
- * '''The web services''' - which provide access to the back-end application's data and logic are specified and tested in the '''[[Web Service BUS][>WebServiceBus]]''' component.
+# * '''The Browser elements''' - mainly !-JavaScript-! widgets - are specified and tested in the [[!-ConferencePlanner-! Browser Interface][^BrowserInterface]] component.
+# * '''The web services''' - which provide access to the back-end application's data and logic are specified and tested in the '''[[Web Service BUS][>WebServiceBus]]''' component.
 
 According to the [[Domain Driven Desing][http://domaindrivendesign.org/]] and [[Business Model Driven Development][http://bmdd.hu]] principles the [[Domain layer][^DomainLayer]] implements the problem domain specific knowledge, in [[Workproduct layer][>WorkProducts]] manifest data sets used by human activities. Technological issues, such as persistency or user interface are taken away from domain layer to the integration, control and presentation layers. Corresponding to this design rules different kind of specifications and test are written againts the different layers:
- * '''[[Presentation Layer][>UseCases]]'''
- * '''[[Work Product Layer][>WorkProducts]]'''
- * '''[[Domain Layer][^DomainLayer]]'''
- * '''[[Integration Layer][>IntegrationLayer]]'''
+ * '''[[Presentation Layer][^UseCases]]'''
+# * '''[[Work Product Layer][>WorkProducts]]'''
+# * '''[[Domain Layer][^DomainLayer]]'''
+# * '''[[Integration Layer][>IntegrationLayer]]'''
 !3 [[Performance Tests][>PerformanceTests]]
 While functional requirements are key, almost always any kind of application should also fulfill certain performance requirements too. Most of the time none functional requirements can be specified in the context of a one ore more functional requirements like [[Use Cases][>UseCases]] or [[Workflows][^WorkflowsPackage]], therefore the referred tests below will reference these items. The application's performance criteria can be categorized as follows:
  * '''[[Load Tests][>PerformanceTests.LoadTests]]'''

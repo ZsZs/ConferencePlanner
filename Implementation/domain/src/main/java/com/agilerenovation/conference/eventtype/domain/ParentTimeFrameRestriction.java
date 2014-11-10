@@ -7,7 +7,7 @@ public class ParentTimeFrameRestriction extends SchedulingConstraint {
 
    @Override
    public boolean analyseEvent( CompositeConferenceEvent parentEvent, ConferenceEvent eventToAnalyse ) {
-      return parentEvent.getPlannedEnd().compareTo( eventToAnalyse.getPlannedEnd() ) > 0 ;
+      return parentEvent.getEarliestEnd().compareTo( eventToAnalyse.getEarliestEnd() ) > 0 ;
    }
 
 }

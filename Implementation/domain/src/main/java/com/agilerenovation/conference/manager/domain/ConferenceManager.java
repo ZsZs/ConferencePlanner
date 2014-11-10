@@ -19,7 +19,6 @@ import com.agilerenovation.conference.papertype.integration.ConferencePaperTypeF
 import com.agilerenovation.conference.papertype.integration.ConferencePaperTypeRepository;
 
 public class ConferenceManager {
-   private static ConferenceManager soleInstance;
    private ConferenceEventFactory eventFactory;
    private ConferenceEventRepository eventRepository;
    private ConferenceEventTypeFactory eventTypeFactory;
@@ -27,6 +26,8 @@ public class ConferenceManager {
    private ConferencePaperRepository paperRepository;
    private ConferencePaperTypeFactory paperTypeFactory;
    private ConferencePaperTypeRepository paperTypeRepository;
+   private static ConferenceManager soleInstance;
+   private static boolean isTestConfigured = false;
    
    //Constructors and factory methods
    private ConferenceManager(){
@@ -93,8 +94,8 @@ public class ConferenceManager {
          CompositeConferenceEvent appropriateSession = conference.findSessionForPaper( conferencePaper );
          if( appropriateSession != null ){
             ConferenceTalk talk = eventFactory.createTalk( appropriateSession, conferencePaper );
-            talk.setScheduledStart( talk.getPlannedStart() );
-            talk.setScheduledEnd( talk.getPlannedEnd() );
+            talk.setScheduledStart( talk.getEarliestStart() );
+            talk.setScheduledEnd( talk.getEarliestEnd() );
             eventRepository.add( talk );
          }
       }

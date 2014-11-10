@@ -58,4 +58,32 @@ public class ConferenceEventRepository {
       }
       return foundEvents;
    }
+
+   public List<ConferenceEvent> findCaterings() {
+      return findByType( ConferenceEventTypes.CATERING );
+   }
+
+   public List<ConferenceEvent> findConferences() {
+      return findByType( ConferenceEventTypes.CONFERENCE );
+   }
+
+   public List<ConferenceEvent> findDays() {
+      return findByType( ConferenceEventTypes.CONFERENCE_DAY );
+   }
+
+   public List<ConferenceEvent> findNetworkEvents() {
+      return findByType( ConferenceEventTypes.NETWORK_EVENT );
+   }
+
+   public List<ConferenceEvent> findSessions() {
+      return findByType( ConferenceEventTypes.SESSION );
+   }
+
+   public List<ConferenceEvent> findTalks() {
+      return findByType( ConferenceEventTypes.TALK );
+   }
+
+   public List<ConferenceEvent> findTracks() {
+      return findByType( ConferenceEventTypes.TRACK );
+   }
 }

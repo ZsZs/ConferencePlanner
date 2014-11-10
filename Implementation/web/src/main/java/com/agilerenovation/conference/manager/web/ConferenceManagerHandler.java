@@ -1,11 +1,13 @@
 package com.agilerenovation.conference.manager.web;
 
+import java.io.IOException;
+
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.ServletException;
-import java.io.IOException;
-import org.eclipse.jetty.server.Server;
+
 import org.eclipse.jetty.server.Request;
+import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.AbstractHandler;
 
 public class ConferenceManagerHandler extends AbstractHandler {
@@ -17,7 +19,7 @@ public class ConferenceManagerHandler extends AbstractHandler {
    }
 
    public static void main( String[] args ) throws Exception {
-      Server server = new Server( 8001 );
+      Server server = new Server( 8000 );
       server.setHandler( new ConferenceManagerHandler() );
 
       server.start();

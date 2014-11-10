@@ -13,8 +13,8 @@ public abstract class CompositeConferenceEvent extends ConferenceEvent {
    private List<ConferenceEvent> events = Lists.newArrayList();
    
    //Constructors
-   public CompositeConferenceEvent( ConferenceEventType type, CompositeConferenceEvent parent, String name, DateTime plannedStart, DateTime plannedEnd ) {
-      super( type, parent, name, plannedStart, plannedEnd );
+   public CompositeConferenceEvent( ConferenceEventType type, CompositeConferenceEvent parent, String name, DateTime earliestStart, DateTime earliestEnd ) {
+      super( type, parent, name, earliestStart, earliestEnd );
    }
 
    //Public accessors and mutators

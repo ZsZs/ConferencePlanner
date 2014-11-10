@@ -43,7 +43,7 @@ public class RetrieveScheduledEvents {
       DateTimeFormatter timeFormatter = DateTimeFormat.forPattern( "HH:mm" );
             
       for( ConferenceEvent conferenceEvent : events ){
-         List<String> begin = list( "begins at", timeFormatter.print( conferenceEvent.getPlannedStart() ));
+         List<String> begin = list( "begins at", timeFormatter.print( conferenceEvent.getEarliestStart() ));
          List<String> title = list( "title", conferenceEvent.getName());
          
          resultList.add( list( begin, title ));

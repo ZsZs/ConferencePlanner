@@ -1,0 +1,1 @@
+call bin/ConferencePlanner.bat

@@ -31,6 +31,7 @@ import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.webapp.WebAppContext;
 
 public class ConferenceManagerApplication {
+   private static final String APPLICATION_CONTEXT = "ConferencePlanner";
    public static final String WEBROOT_INDEX = "/webapp/";
    private URI baseUri;
    private ServerConnector connector;
@@ -48,10 +49,14 @@ public class ConferenceManagerApplication {
    }
 
    // Main
-   public static void main( String[] args ) throws Exception {
+   public static void main( String[] args ) {
       ConferenceManagerApplication application = new ConferenceManagerApplication( 8000 );
-      application.start();
-      application.waitForInterrupt();
+      try{
+         application.start();
+         application.waitForInterrupt();
+      }catch( Exception e ){
+         e.printStackTrace();
+      }
    }
 
    // Public accessors and mutators
@@ -128,7 +133,7 @@ public class ConferenceManagerApplication {
 
    private void configureWebAppContext() {
       webAppContext = new WebAppContext();
-      webAppContext.setContextPath( "/" + "ConferencePlanner" );
+      webAppContext.setContextPath( "/" + APPLICATION_CONTEXT );
       webAppContext.setResourceBase( baseUri.toASCIIString() );
       webAppContext.setDescriptor( WEBROOT_INDEX + "/WEB-INF/web.xml" );
       webAppContext.setAttribute( InstanceManager.class.getName(), new SimpleInstanceManager() );
@@ -179,7 +184,7 @@ public class ConferenceManagerApplication {
       }
       int port = connector.getLocalPort();
       serverURI = new URI( String.format( "%s://%s:%d/", scheme, host, port ) );
-      logger.info( "Server URI: " + serverURI );
+      logger.info( "Server URI: " + serverURI + "/" + APPLICATION_CONTEXT );
    }
 
    private void initializeWebAppContext() {

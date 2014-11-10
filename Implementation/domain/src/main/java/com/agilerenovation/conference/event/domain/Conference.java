@@ -10,8 +10,8 @@ import com.agilerenovation.conference.paper.domain.ConferencePaper;
 
 public class Conference extends CompositeConferenceEvent {
 
-   public Conference( ConferenceEventType type, String name, DateTime plannedStart, DateTime plannedEnd ) {
-      super( type, null, name, plannedStart, plannedEnd );
+   public Conference( ConferenceEventType type, String name, DateTime earliestStart, DateTime earliestEnd ) {
+      super( type, null, name, earliestStart, earliestEnd );
    }
 
    public CompositeConferenceEvent findSessionForPaper( ConferencePaper conferencePaper ) {

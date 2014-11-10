@@ -50,7 +50,7 @@ public class DefineConferencePropertiesTest {
       //VERIFY:
       ConferenceTrack track = eventRepository.findByName( "track-1", ConferenceTrack.class );
       CompositeConferenceEvent session = eventRepository.findByName( "session-1", ConferenceSession.class );
-      assertThat( session.getPlannedStart(), equalTo( track.getPlannedStart().plusHours( 9 )));
-      assertThat( session.getPlannedEnd(), equalTo( track.getPlannedStart().plusHours( 12 )));
+      assertThat( session.getEarliestStart(), equalTo( track.getEarliestStart().plusHours( 9 )));
+      assertThat( session.getEarliestEnd(), equalTo( track.getEarliestStart().plusHours( 12 )));
    }
 }

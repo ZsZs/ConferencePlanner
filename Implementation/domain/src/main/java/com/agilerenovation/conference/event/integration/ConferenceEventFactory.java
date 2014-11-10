@@ -31,14 +31,14 @@ public class ConferenceEventFactory {
    
    public ConferenceCatering createCatering( String cateringName, ConferenceDay conferenceDay, int startsAt, int endsAt ) {
       ConferenceEventType eventType = eventTypeRepository.findByName( ConferenceEventTypes.CATERING );
-      DateTime plannedStart = conferenceDay.getPlannedStart().plusHours( startsAt );
-      DateTime plannedEnd = conferenceDay.getPlannedStart().plusHours( endsAt );
+      DateTime plannedStart = conferenceDay.getEarliestStart().plusHours( startsAt );
+      DateTime plannedEnd = conferenceDay.getEarliestStart().plusHours( endsAt );
       return new ConferenceCatering( eventType, conferenceDay, cateringName, plannedStart, plannedEnd );
    }
 
-   public Conference createConference( String conferenceName, DateTime plannedStart, DateTime plannedEnd ) {
+   public Conference createConference( String conferenceName, DateTime earliestStart, DateTime earliestEnd ) {
       ConferenceEventType eventType = eventTypeRepository.findByName( ConferenceEventTypes.CONFERENCE );
-      return new Conference( eventType, conferenceName, plannedStart, plannedEnd );
+      return new Conference( eventType, conferenceName, earliestStart, earliestEnd );
    }
 
    public ConferenceDay createDay( String dayName, String conferenceName ) {
@@ -48,7 +48,7 @@ public class ConferenceEventFactory {
 
    public ConferenceDay createDay( String dayName, Conference conference ) {
       ConferenceEventType eventType = eventTypeRepository.findByName( ConferenceEventTypes.CONFERENCE_DAY );
-      return new ConferenceDay( eventType, conference, dayName, conference.getPlannedStart(), conference.getPlannedEnd() );
+      return new ConferenceDay( eventType, conference, dayName, conference.getEarliestStart(), conference.getEarliestEnd() );
    }
 
    public NetworkEvent createNetworkEvent( String networkEventName, String dayName, int startsAt, int endsAt ) {
@@ -58,8 +58,8 @@ public class ConferenceEventFactory {
    
    public NetworkEvent createNetworkEvent( String networkEventName, ConferenceDay conferenceDay, int startsAt, int endsAt ) {
       ConferenceEventType eventType = eventTypeRepository.findByName( ConferenceEventTypes.NETWORK_EVENT );
-      DateTime plannedStart = conferenceDay.getPlannedStart().plusHours( startsAt );
-      DateTime plannedEnd = conferenceDay.getPlannedStart().plusHours( endsAt );
+      DateTime plannedStart = conferenceDay.getEarliestStart().plusHours( startsAt );
+      DateTime plannedEnd = conferenceDay.getEarliestStart().plusHours( endsAt );
       return new NetworkEvent( eventType, conferenceDay, networkEventName, plannedStart, plannedEnd );
    }
 
@@ -70,8 +70,8 @@ public class ConferenceEventFactory {
    
    public CompositeConferenceEvent createSession( String sessionName, ConferenceTrack track, Integer startsAt, Integer endsAt ) {
       ConferenceEventType eventType = eventTypeRepository.findByName( ConferenceEventTypes.SESSION );
-      DateTime plannedStart = track.getPlannedStart().plusHours( startsAt );
-      DateTime plannedEnd = track.getPlannedStart().plusHours( endsAt );
+      DateTime plannedStart = track.getEarliestStart().plusHours( startsAt );
+      DateTime plannedEnd = track.getEarliestStart().plusHours( endsAt );
       return new ConferenceSession( eventType, track, sessionName, plannedStart, plannedEnd );
    }
 
@@ -89,6 +89,6 @@ public class ConferenceEventFactory {
 
    public ConferenceTrack createTrack( String trackName, ConferenceDay conferenceDay ) {
       ConferenceEventType eventType = eventTypeRepository.findByName( ConferenceEventTypes.TRACK );
-      return new ConferenceTrack( eventType, conferenceDay, trackName, conferenceDay.getPlannedStart(), conferenceDay.getPlannedEnd() );
+      return new ConferenceTrack( eventType, conferenceDay, trackName, conferenceDay.getEarliestStart(), conferenceDay.getEarliestEnd() );
    }
 }
